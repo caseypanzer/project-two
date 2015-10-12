@@ -2,4 +2,7 @@
     <img src = "<%= post.coverPhoto %>">
     <p> <%= post.title %> </p>
     <p> <%= post.articleText %> </p>
-  </div>
+    <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+      <input type="submit" value="Delete Wiki!">
+    </form>
+</div>
