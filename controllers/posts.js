@@ -42,26 +42,27 @@ router.get('/:id', function(req, res){
 
 //EDIT
 router.get('/:id/edit', function(req, res){
-  // var mongoID = req.params.id
-  // Post.findOne({ _id: req.params.id }, function(err, foundPost){
-  //   if(err){
-  //     console.log(err);
-  //   } else {
-  //       res.render("posts/view", { post: foundPost })
-  //   };
-  // });
+  Post.findOne({ _id: req.params.id }, function(err, foundPost){
+    if(err){
+      console.log(err);
+    } else {
+        res.render("posts/edit", { post: foundPost })
+    };
+  });
 });
 
 //PATCH
 router.patch('/:id', function(req, res){
-  // var mongoID = req.params.id
-  // Post.findOne({ _id: req.params.id }, function(err, foundPost){
-  //   if(err){
-  //     console.log(err);
-  //   } else {
-  //       res.render("posts/view", { post: foundPost })
-  //   };
-  // });
+  var mongoID    = req.params.id;
+  var postUpdate = req.body.post;
+
+  Post.update({ _id: mongoID }, postUpdate, function(err, foundPost){
+    if(err){
+      console.log(err);
+    } else {
+        res.redirect(302, '/posts/' + mongoID)
+    };
+  });
 });
 
 //DELETE

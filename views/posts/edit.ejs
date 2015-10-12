@@ -1,0 +1,16 @@
+<p>Last Updated By: </p>
+<p>Last Updated On: </p>
+<form action="/posts/<%= post._id %>?_method=PATCH" method="post">
+    <input type = "text"
+         name = "post[title]"
+         value = "<%= post.title %>"
+         placeholder="Enter Article Title">
+   <textarea name = "post[articleText]">
+        <%= post.articleText %>
+    </textarea>
+    <input type = "text"
+         name = "post[coverPhoto]"
+         value = "<%= post.coverPhoto %>"
+         placeholder="Paste Link to Cover Photo">
+    <input type="submit" value="Post to Wiki!">
+</form>
