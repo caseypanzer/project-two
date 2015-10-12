@@ -10,10 +10,24 @@ router.get('/new', function(req, res){
 });
 
 router.post('/', function (req, res){
+  //first test that email and reEmail ===
+    //if not then tell user they dont match
+      //then test that password and rePassword ===
+        //if not then tell user they dont match
+
+  //check to see if email is in database [x]
+    //if it is redirect to login screen [x]
+    //if its not sign up user [x]
+    console.log(req.body);
   var newUser = User(req.body.user);
-  console.log(newUser);
-  newUser.save(function (err, user){
-    res.redirect(301,"/users/" + user._id)
+  User.findOne({ email: newUser.email }, function(err, user) {
+    if (user) {
+      res.redirect(302,"/users/login");
+    } else {
+      newUser.save(function (err, user){
+          res.redirect(302,"/users/" + user._id)
+      });
+    }
   });
 });
 
