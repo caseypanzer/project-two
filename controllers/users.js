@@ -12,8 +12,8 @@ router.get('/new', function(req, res){
 router.post('/', function (req, res){
   //first test that email and reEmail ===
     //if not then tell user they dont match
-      //then test that password and rePassword ===
-        //if not then tell user they dont match
+  //then test that password and rePassword ===
+    //if not then tell user they dont match
 
   //check to see if email is in database [x]
     //if it is redirect to login screen [x]

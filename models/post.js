@@ -5,8 +5,8 @@ var postSchema = new Schema({
   lastUpdated: {type: String, required: true},
   lastUpdatedBy: {type: String, required: true},
   title: {type: String, required: true},
-  description: {type: String, required: true},
-  photos: {type: Array},
+  articleText: {type: String, required: true},
+  coverPhoto: {type: Array},
   previousEntries: {type: Array}
 });
 

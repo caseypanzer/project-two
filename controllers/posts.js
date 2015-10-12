@@ -9,6 +9,5 @@ router.get('/new', function(req, res){
   res.render('posts/new');
 });
 
-
 //export router object
 module.exports = router;

@@ -43,6 +43,9 @@ server.use(function (req, res, next){
 var userController = require('./controllers/users.js');
 server.use('/users', userController)
 
+var postController = require('./controllers/posts.js');
+server.use('/posts', postController)
+
 //SERVER STUFF
 
 server.get('/', function(req, res){
