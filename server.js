@@ -43,6 +43,22 @@ server.use(function (req, res, next){
 var userController = require('./controllers/users.js');
 server.use('/users', userController)
 
+//middleware to validate login?
+//chcek to see if current seeion has a user
+//if true redirect to page
+//if not redirect to login
+
+server.use(function(req, res, next){
+  var user = req.session.currentUser;
+
+  if(user){
+    console.log("user logged in");
+  } else {
+    res.redirect(302,'/users/login')
+  };
+  next();
+});
+
 var postController = require('./controllers/posts.js');
 server.use('/posts', postController)
 

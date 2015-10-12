@@ -42,7 +42,7 @@ router.post('/login', function(req, res){
   User.findOne({ email: attempt.email }, function(err, user) {
     var message;
 
-    if( user && user.password == attempt.password ) {
+    if( user && user.password === attempt.password ) {
         req.session.currentUser = user.email;
 
         res.redirect(302, '/users/welcome');
