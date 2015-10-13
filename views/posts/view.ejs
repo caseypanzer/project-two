@@ -1,8 +1,14 @@
 <div class = "post">
     <img src = "<%= post.coverPhoto %>">
-    <p> <%= post.title %> </p>
-    <p> <%= post.articleText %> </p>
+    <p class="title"> <%= post.title %> </p>
+    <p class="content"> <%= post.articleText %> </p>
     <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
       <input type="submit" value="Delete Wiki!">
     </form>
 </div>
+
+<script>
+  // $('.post .title').click(function (e) {
+  //   $(this).siblings('.content').slideDown(500);
+  // });
+</script>

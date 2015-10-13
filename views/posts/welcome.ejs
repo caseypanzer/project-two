@@ -1,7 +1,13 @@
+
 <% posts.forEach(function(post){ %>
   <div class = "post">
-    <img src = "<%= post.coverPhoto %>">
-    <p> <%= post.title %> </p>
-    <p> <%= post.articleText %> </p>
-  </div>
+        <div class = "tag-line"><%= post.title %></div>
+        <div class = "content">
+            <div class = "img-container-one"><img src = "<%= post.coverPhoto %>"></div>
+           <div class = "text-container"> <%= post.articleText %> </div>
+      </div>
+</div>
 <% }) %>
+
+
+<script src="/scripts/posts.js"></script>

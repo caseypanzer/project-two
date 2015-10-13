@@ -1,3 +1,56 @@
 *{
-  background-color: red;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*POST CSS*/
+.post{
+  width: 80%;
+  height: auto;
+
+  border: 1px black solid;
+  border-radius: .15em;
+
+  margin: 0 auto;
+
+  margin-bottom: .1em;
+}
+.tag-line{
+  font-size: 2em;
+  padding: .25em;
+
+  max-height: 2.5em;
+
+  background-color: lightgrey;
+
+  border-radius: .1em;
+}
+
+.tag-line:hover{
+  transition: .5s;
+  background-color: steelblue;
+}
+
+.content{
+  min-height: 12em;
+  min-width: 100%;
+
+  padding: .5em;
+
+  /*display: none;*/
+}
+
+.img-container-one{
+  width: 10em;
+  height: 10em;
+
+  float: left;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.img-container-one img{
+  width: 100%;
+  height: 100%;
 }

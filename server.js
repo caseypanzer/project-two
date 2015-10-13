@@ -53,10 +53,10 @@ server.use(function(req, res, next){
 
   if(user){
     console.log("user logged in");
+    next();
   } else {
     res.redirect(302,'/users/login')
   };
-  next();
 });
 
 var postController = require('./controllers/posts.js');

@@ -18,7 +18,7 @@ router.post('/', function (req, res){
   //check to see if email is in database [x]
     //if it is redirect to login screen [x]
     //if its not sign up user [x]
-    console.log(req.body);
+  console.log(req.body);
   var newUser = User(req.body.user);
   User.findOne({ email: newUser.email }, function(err, user) {
     if (user) {
@@ -31,12 +31,12 @@ router.post('/', function (req, res){
   });
 });
 
-//LOGIN
-router.get('/login', function (req, res){
+//LOGIN -> server.use('/session', sessionController)
+router.get('/login', function (req, res){ // get '/new'
   res.render('users/login');
 });
 
-router.post('/login', function(req, res){
+router.post('/login', function(req, res){ // post '/'
   var attempt = req.body.user;
 
   User.findOne({ email: attempt.email }, function(err, user) {
@@ -47,7 +47,7 @@ router.post('/login', function(req, res){
 
         res.redirect(302, '/users/welcome');
     } else {
-        res.redirect(302, '/users/login');
+        res.redirect(302, '/users/login'); // redirect to `/session/new`
     };
   });
 });
