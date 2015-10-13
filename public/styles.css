@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Verdana, Geneva, sans-serif
 }
 
 /*HEADER*/
@@ -16,7 +16,6 @@
   width: 100%;
 
   background-color: steelblue;
-  border: 1px lightgrey solid;
 
   margin-bottom: .05em;
 
@@ -30,6 +29,8 @@
   padding-left: .5em;
 
   font-size: 2.5em;
+
+  font-family: 'Megrim', cursive;
 }
 
 .search-bar{
@@ -48,8 +49,63 @@
 }
 
 /*USER CSS*/
+.narrow-form-container{
+    position: relative;
+    top: 10em;
 
+    width: 22em;
+    height: auto;
 
+    background-color: white;
+    margin: 0 auto;
+
+    margin-bottom: .1em;
+
+    opacity: 0.75;
+    filter: alpha(opacity=40);
+
+    border-radius: 5px;
+  }
+
+.background-image{
+  position: fixed;
+  top: 3.75rem;
+  right: 0;
+
+  background: url(http://www.spirit1059.com/pics/Feeds/Articles/2015611/118317/Beach.jpg);
+  background-size: cover;
+
+  width: 100%;
+  padding-top: 66.64%;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.input-container{
+  font-size: 1.1em;
+  /*text-align: center;*/
+
+  border: 1px lightgrey solid;
+  border-radius: 15px;
+
+  padding: .25em;
+  margin: .25em;
+}
+.icon{
+  display: inline-block;
+
+  padding-right: .5em;
+  padding-left: .75em;
+
+  width: 1em;
+}
+.single-line-input-form{
+  width: 18rem;
+  font-size: 1em;
+
+  border: none;
+  text-align: center;
+}
 
 /*POST CSS*/
 .post{
@@ -177,7 +233,7 @@ label{
   padding: .1em;
 }
 
-h2{
+.header{
   text-align: center;
 }
 

@@ -1,9 +1,23 @@
+<div class = "background-image">
+</div>
+<div class = "narrow-form-container">
 <form action="/users/login" method="post">
-    <input type = "text"
-          name = "user[email]"
-          placeholder="Email Address">
-    <input type = "password"
-          name = "user[password]"
-          placeholder="Enter Password">
-    <input type="submit" value="Login">
+    <h2 class="header">Welcome to Wiki!</h2>
+    <h3 class="header">Please Sign In Below</h3>
+      <div class = "input-container">
+        <div class = "icon">&#x2709;</div>
+        <input type = "text"
+              name = "user[email]"
+              placeholder="Email Address"
+              class = "single-line-input-form">
+      </div>
+      <div class = "input-container">
+        <div class = "icon">&#xe204;</div>
+        <input type = "password"
+              name = "user[password]"
+              placeholder="Enter Password"
+              class = "single-line-input-form">
+      </div>
+      <input type="submit" class="my-button" value="Login">
 </form>
+</div>
