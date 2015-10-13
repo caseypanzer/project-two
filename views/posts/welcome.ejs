@@ -2,10 +2,11 @@
 <% posts.forEach(function(post){ %>
   <div class = "post">
         <div class = "tag-line"><%= post.title %></div>
-        <div class = "content">
+        <div class = "content hidden">
             <div class = "img-container-one"><img src = "<%= post.coverPhoto %>"></div>
            <div class = "text-container"> <%= post.articleText %> </div>
-        <a class = "my-button edit" href="/posts/<%- post._id %>/edit">Edit Post</a>
+          <a href="/posts/<%- post._id %>/edit"><button class = "my-button">Edit Wiki</button></a>
+          <a href="/posts/<%- post._id %>/"><button class = "my-button">View Wiki</button></a>
       </div>
 </div>
 <% }) %>

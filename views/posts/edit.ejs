@@ -8,12 +8,14 @@
         <input type = "text"
                name = "post[title]"
                value = "<%= post.title %>"
+               class= "input-post"
                placeholder="Enter Article Title"></br>
        <label>Article Text</label></br>
        <textarea name = "post[articleText]"><%= post.articleText %></textarea></br>
        <label>Link to Photo:</label></br>
         <input type = "text"
                name = "post[coverPhoto]"
+               class= "input-post"
                value = "<%= post.coverPhoto %>"
                placeholder="Paste Link to Cover Photo">
         <input class = "my-button submit" type="submit" value="Post to Wiki!">
