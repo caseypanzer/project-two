@@ -2,20 +2,26 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  font-family: 'Roboto', sans-serif;
 }
 
 /*POST CSS*/
 .post{
+  position: relative;
+
   width: 80%;
   height: auto;
 
-  border: 1px black solid;
+  border: 1px grey solid;
   border-radius: .15em;
 
   margin: 0 auto;
 
   margin-bottom: .1em;
+
 }
+
 .tag-line{
   font-size: 2em;
   padding: .25em;
@@ -38,7 +44,7 @@
 
   padding: .5em;
 
-  /*display: none;*/
+  display: none;
 }
 
 .img-container-one{
@@ -53,4 +59,80 @@
 .img-container-one img{
   width: 100%;
   height: 100%;
+}
+
+.edit{
+  position: absolute;
+  bottom: 0;
+  left:0;
+}
+
+.my-button{
+  width: 100%;
+  height: 2em;
+
+  border: 0;
+
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding: .5em;
+
+  background-color: indianred;
+}
+.my-button:hover{
+  background-color: lightpink;
+}
+.my-button:link{
+  color: black;
+}
+
+/*EDIT*/
+.info{
+  float: left;
+
+  height: 1.75em;
+  width: 100%;
+
+  padding: .25em;
+  margin-bottom: .25em;
+
+  font-size: 1em;
+  text-align: center;
+}
+
+input{
+  width: 100%;
+  height: 2em;
+
+  font-size: 1em;
+
+  padding: .25em;
+  margin-bottom: .5em;
+}
+
+textarea{
+  width: 100%;
+  height: 25em;
+
+  padding: .25em;
+  margin-bottom: .25em;
+
+  font-size: 1em;
+
+  resize: none;
+}
+
+label{
+  font-size: 1em;
+  padding: .1em;
+}
+
+h2{
+  text-align: center;
+}
+
+.single-post{
+  padding: .5em;
 }

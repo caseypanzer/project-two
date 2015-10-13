@@ -1,16 +1,21 @@
-<p>Last Updated By: </p>
-<p>Last Updated On: </p>
-<form action="/posts/<%= post._id %>?_method=PATCH" method="post">
-    <input type = "text"
-         name = "post[title]"
-         value = "<%= post.title %>"
-         placeholder="Enter Article Title">
-   <textarea name = "post[articleText]">
-        <%= post.articleText %>
-    </textarea>
-    <input type = "text"
-         name = "post[coverPhoto]"
-         value = "<%= post.coverPhoto %>"
-         placeholder="Paste Link to Cover Photo">
-    <input type="submit" value="Post to Wiki!">
-</form>
+
+<div class = "post single-post">
+    <h2>Edit Article</h2>
+    <hr/>
+    <div class = "info">Last Updated By: <%= post.lastUpdatedBy %> on <%= post.lastUpdated %> at</div>
+    <form action="/posts/<%= post._id %>?_method=PATCH" method="post"></br>
+        <label>Post Title:</label></br>
+        <input type = "text"
+               name = "post[title]"
+               value = "<%= post.title %>"
+               placeholder="Enter Article Title"></br>
+       <label>Article Text</label></br>
+       <textarea name = "post[articleText]"><%= post.articleText %></textarea></br>
+       <label>Link to Photo:</label></br>
+        <input type = "text"
+               name = "post[coverPhoto]"
+               value = "<%= post.coverPhoto %>"
+               placeholder="Paste Link to Cover Photo">
+        <input class = "my-button submit" type="submit" value="Post to Wiki!">
+    </form>
+</div>

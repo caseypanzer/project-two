@@ -5,9 +5,9 @@
         <div class = "content">
             <div class = "img-container-one"><img src = "<%= post.coverPhoto %>"></div>
            <div class = "text-container"> <%= post.articleText %> </div>
+        <a class = "my-button edit" href="/posts/<%- post._id %>/edit">Edit Post</a>
       </div>
 </div>
 <% }) %>
-
 
 <script src="/scripts/posts.js"></script>

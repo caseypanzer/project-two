@@ -20,7 +20,13 @@ router.get('/new', function(req, res){
 
 //CREATE POST
 router.post('/', function(req, res){
-  var newPost = Post(req.body.post);
+  var newPost = Post({
+    lastUpdated: Date.now(),
+    lastUpdatedBy: req.session.currentUser,
+    title: req.body.post.title,
+    articleText: req.body.post.articleText,
+    coverPhoto: req.body.post.coverPhoto
+  });
   console.log(newPost);
 
   newPost.save(function (err, post){
