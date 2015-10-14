@@ -1,4 +1,9 @@
-<div class = "posts-table">
+<% include ../header.ejs %>
+<% include ../navbar.ejs %>
+
+<div class = "post-container">
+  <div class = "header">Articles by You</div>
+  <hr>
   <% posts.forEach(function(post){ %>
     <div class = "post">
           <div class = "tag-line tag-line-summary">
@@ -17,5 +22,3 @@
   <% }) %>
 </div>
 <script src="/scripts/posts.js"></script>
-
-<% include ../header.ejs %>

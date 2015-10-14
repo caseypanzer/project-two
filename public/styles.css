@@ -3,7 +3,17 @@
   padding: 0;
   margin: 0;
 
-  font-family: Verdana, Geneva, sans-serif
+  font-family: RosettaTones, Geneva, sans-serif
+}
+a{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'RosettaTones';
+  src: url('fonts/RosettaTones.eot?#iefix') format('embedded-opentype'),  url('fonts/RosettaTones.woff') format('woff'), url('fonts/RosettaTones.ttf')  format('truetype'), url('fonts/RosettaTones.svg#RosettaTones') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*HEADER*/
@@ -36,31 +46,43 @@
   font-family: 'Megrim', cursive;
   display: inline-block;
 }
+
 .nav-bar{
-  height: 100%;
-  display: inline-block;
+  position: absolute;
+  top: 3.75em;
+  left: 0em;
 
-  padding-left: 1em;
+  height: 100%;
+  width: 8em;
+
+  padding-top: 1em;
+
+  border: 1px solid lightgrey;
+
+  background-color: white;
+
+  box-shadow: 0px 1.25px 3.5px grey
 }
-.nav-button{
-  height: 100%;
-  width: 5.5em;
 
+.nav-button{
   border: 0;
+  width: 100%;
 
   font-size: 1em;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   color: black;
 
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
+  background-color: white;
 
-  background-color: steelblue;
+  display: block;
+  padding: .75em;
+
+  border-bottom: 1px solid lightgrey;
 }
 
 .nav-button:hover{
-  background: lightgrey;
+  background-color: lightgrey;
 }
 
 .search-bar{
@@ -141,15 +163,23 @@
   text-align: center;
 }
 
-/*POST CSS*/
-.post{
+/*CONTENT CSS*/
+.content-container{
   position: relative;
-  top: 4.2em;
-  width: 80%;
+  top: 4em;
   height: auto;
+  margin-left: 9em;
+  margin-right: 1em;
+}
 
-  margin: 0 auto;
+/*POST CSS*/
+.post-container{
 
+
+}
+
+.post{
+  width: 100%;
   border: 1px grey solid;
   border-radius: .1em;
 
@@ -174,7 +204,7 @@
 
 .tag-line-summary:hover{
   transition: .5s;
-  background-color: steelblue;
+  background-color: #90B4D2;
 }
 
 .tag-line-description{
@@ -285,13 +315,8 @@ label{
   padding: .1em;
 }
 
-h3{
-  font-weight: normal;
-}
 .header{
+  font-size: 1.2em;
+  font-weight: lighter;
   text-align: center;
-}
-
-.single-post{
-  padding: .5em;
 }

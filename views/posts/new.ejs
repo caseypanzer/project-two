@@ -1,5 +1,7 @@
-<div class = "post single-post">
-    <h2>New Article</h2>
+<% include ../header.ejs %>
+<% include ../navbar.ejs %>
+<div class = "post-container">
+    <div class = "header">New Article</div>
     <hr/>
     <form action="/posts/" method="post"></br>
         <label>Post Title:</label></br>
@@ -18,4 +20,3 @@
         <input class = "my-button submit" type="submit" value="Post to Wiki!">
     </form>
 </div>
-<% include ../header.ejs %>

@@ -1,6 +1,7 @@
-
-<div class = "post single-post">
-    <h2>Edit Article</h2>
+<% include ../header.ejs %>
+<% include ../navbar.ejs %>
+<div class = "post-container">
+    <div class = "header">Edit Article</div>
     <hr/>
     <div class = "info">Last Updated By: <%= post.lastUpdatedBy %> on <%= post.lastUpdated %> at</div>
     <form action="/posts/<%= post._id %>?_method=PATCH" method="post"></br>
@@ -21,4 +22,3 @@
         <input class = "my-button" type="submit" value="Post to Wiki!">
     </form>
 </div>
-<% include ../header.ejs %>
