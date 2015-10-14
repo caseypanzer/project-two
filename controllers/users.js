@@ -26,7 +26,7 @@ router.post('/', function (req, res){
       res.redirect(302,"/users/login");
     } else {
       newUser.save(function (err, user){
-          res.redirect(302,"/users/" + user._id)
+          res.redirect(302,"/session/welcome")
       });
     }
   });
@@ -46,20 +46,9 @@ router.post('/login', function(req, res){ // post '/'
     if( user && user.password === attempt.password ) {
         req.session.currentUser = user.email;
 
-        res.redirect(302, '/users/welcome');
+        res.redirect(302, '/session/welcome');
     } else {
         res.redirect(302, '/users/login'); // redirect to `/session/new`
-    };
-  });
-});
-
-//WELCOME
-router.get('/welcome', function(req, res){
-  Post.find({}, function(err, postsArray){
-    if(err){
-      console.log(err);
-    } else {
-        res.render("users/welcome", { posts: postsArray })
     };
   });
 });

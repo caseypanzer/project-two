@@ -59,6 +59,9 @@ server.use(function(req, res, next){
   };
 });
 
+var sessionController = require('./controllers/session.js');
+server.use('/session', sessionController)
+
 var postController = require('./controllers/posts.js');
 server.use('/posts', postController)
 

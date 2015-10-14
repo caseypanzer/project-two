@@ -4,13 +4,13 @@ var express = require('express'),
 
 //VIEW ALL
 router.get('/welcome', function(req, res){
-  Post.find({}, function(err, postsArray){
+Post.find({}, function(err, postsArray){
     if(err){
       console.log(err);
     } else {
         res.render("posts/welcome", { posts: postsArray })
     };
-  });
+  }).sort({ title: 1 });
 });
 
 //NEW POST FORM
