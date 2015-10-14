@@ -1,6 +1,7 @@
 var express = require('express'),
     router  = express.Router(),
-    User    = require('../models/user.js');
+    User    = require('../models/user.js'),
+    Post    = require('../models/post.js');;
 
 // routes
 
@@ -54,11 +55,13 @@ router.post('/login', function(req, res){ // post '/'
 
 //WELCOME
 router.get('/welcome', function(req, res){
-  if( req.session.currentUser ){
-    res.render('users/welcome');
-  }else{
-    res.redirect(302,'/users/login')
-  };
+  Post.find({}, function(err, postsArray){
+    if(err){
+      console.log(err);
+    } else {
+        res.render("users/welcome", { posts: postsArray })
+    };
+  });
 });
 
 //export router object

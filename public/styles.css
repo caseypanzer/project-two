@@ -11,6 +11,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 
   height: 3.75em;
   width: 100%;
@@ -31,6 +32,30 @@
   font-size: 2.5em;
 
   font-family: 'Megrim', cursive;
+  display: inline-block;
+}
+.nav-bar{
+  height: 100%;
+  display: inline-block;
+
+  padding-left: 1em;
+}
+.nav-button{
+  height: 100%;
+  width: 5.5em;
+
+  border: 0;
+
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+
+  background-color: steelblue;
+}
+
+.nav-button:hover{
+  background: lightgrey;
 }
 
 .search-bar{
@@ -41,6 +66,8 @@
   margin-top: 1em;
 
   height: 100%;
+
+  display: inline-block;
 }
 
 .search-container{
@@ -108,35 +135,58 @@
 }
 
 /*POST CSS*/
-.post{
+.posts-table{
   position: relative;
   top: 4.2em;
-
   width: 80%;
   height: auto;
 
-  border: 1px grey solid;
-  border-radius: .15em;
-
   margin: 0 auto;
+
+}
+
+.post:nth-child(odd){
+  background-color: lightgrey;
+}
+
+.post{
+  width: 100%;
+
+  border: 1px grey solid;
+  border-radius: .1em;
 
   margin-bottom: .1em;
 }
 
 .tag-line{
-  font-size: 2em;
+  font-size: 1em;
   padding: .25em;
 
-  max-height: 2.5em;
-
-  background-color: lightgrey;
+  min-height: 2.5em;
 
   border-radius: .1em;
+
+  display: inline-block;
+}
+.tag-line-summary{
+  width: 100%;
 }
 
-.tag-line:hover{
+.tag-line-summary:hover{
   transition: .5s;
   background-color: steelblue;
+}
+
+.tag-line-description{
+  display: inline-block;
+  width: 20em;
+  font-size: .5em;
+  float: left;
+}
+.tag-line-update-info{
+  display: inline-block;
+  float: right;
+  font-size: .2em;
 }
 
 .hidden{
@@ -233,6 +283,9 @@ label{
   padding: .1em;
 }
 
+h3{
+  font-weight: normal;
+}
 .header{
   text-align: center;
 }

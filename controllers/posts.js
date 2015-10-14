@@ -21,7 +21,7 @@ router.get('/new', function(req, res){
 //CREATE POST
 router.post('/', function(req, res){
   var newPost = Post({
-    lastUpdated: Date.now(),
+    lastUpdated: Date(Date.now()),
     lastUpdatedBy: req.session.currentUser,
     title: req.body.post.title,
     articleText: req.body.post.articleText,
@@ -60,9 +60,15 @@ router.get('/:id/edit', function(req, res){
 //PATCH
 router.patch('/:id', function(req, res){
   var mongoID    = req.params.id;
-  var postUpdate = req.body.post;
+  var postUpdate = {
+    lastUpdated: Date(Date.now()),
+    lastUpdatedBy: req.session.currentUser,
+    title: req.body.post.title,
+    articleText: req.body.post.articleText,
+    coverPhoto: req.body.post.coverPhoto
+  };
 
-  Post.update({ _id: mongoID }, postUpdate, function(err, foundPost){
+  Post.update({ _id: mongoID }, postUpdate, function(err, updatedPost){
     if(err){
       console.log(err);
     } else {

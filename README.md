@@ -5,19 +5,19 @@ TODO:
 **Create View Templates**
 ## Layout
   - Nav Bar
-    - Hamburger Icon
-      - Li of Places to Go
+      - Li of Places to Go [x]
     - Search
   - Header
     - Brand
-  - Footer
+
 ## Users
-  - Login
-  - New
+  - Login [x]
+  - New [x]
+  - Welcome [x]
 
 ## Posts
-  - Login
-  - New
+  - Welcome [x]
+  - New/Edit [x]
 
 **Create Database Views:**
 ##User
@@ -26,4 +26,7 @@ TODO:
     - Sort chronologically
 
 ##Schemas:
-  - Figure out how to add time stamp and author to schema
+  - Figure out how to add time stamp and author to schema [x]
+
+## TO FIX
+- Updates not posting who updated and time
