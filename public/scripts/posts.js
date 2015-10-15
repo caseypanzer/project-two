@@ -1,6 +1,7 @@
 var $tagLine = $(".tag-line");
 
 $tagLine.on("click",function(e){
+  console.log(this);
       $(this).siblings('.content').toggle(0);
 });
 

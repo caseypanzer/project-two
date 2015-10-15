@@ -10,7 +10,6 @@
               <div class = "tag-line-header"><%= post.title %></div>
               <div class = "tag-line-description">some, tags, some tags</div>
               <div class = "tag-line-update-info"><%= post.lastUpdated %> by <%= post.lastUpdatedBy %></div>
-
             </div>
             <div class = "content hidden">
                 <div class = "img-container-one"><img src = "<%= post.coverPhoto %>"></div>
@@ -22,20 +21,124 @@
     <% }) %>
   </div>
   <div class = "post-container">
-    <div class = "header">Articles</div>
+    <div class = "header">Cash Flow</div>
     <hr/>
-    <table style="width:100%">
-  <tr> for loop to loop through all tenats?
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-</table>
+      <table style="width:100%">
+        <tr>
+          <th></th>
+          <td>Year 1</td>
+          <td>Year 2</td>
+          <td>Year 3</td>
+          <td>Year 4</td>
+          <td>Year 5</td>
+        </tr>
+        <tr>
+          <td>Revenue</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+        </tr>
+        <tr>
+          <td>Expenses</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+        </tr>
+        <tr>
+          <td>NOI</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+          <td>$123</td>
+        </tr>
+      </table>
+  </div>
+  <div class = "post-container">
+    <div class = "header">Tenants</div>
+    <hr/>
+    <div class = "post">
+        <div class = "tag-line tag-line-summary">
+          <div class = "tag-line-header">test</div>
+        </div>
+<!-- Tenant Info Start -->
+        <div class = "content hidden">
+          <div class = "header">Info</div>
+          <hr>
+        </div>
+<!-- Tenant Info Start -->
+        <div class = "content hidden">
+          <div class = "header">Info</div>
+          <hr>
+        </div>
+<!-- Tenant Rent Table Start -->
+        <div class = "content hidden">
+          <div class = "header">Rents</div>
+          <hr/>
+          <table class = "rent-assump-table" style="width:100%">
+            <tr>
+            <th colspan="2">Rent Period</th>
+            <th></th>
+            <th></th>
+            <th>Upon?</th>
+          </tr>
+            <tr>
+              <th>Start</th>
+              <th>End</th>
+              <th>Rent</th>
+              <th>Commission</th>
+              <th>Expiration</th>
+            </tr>
+            <tr>
+              <td>
+                <div class = "date-display rent-inputs">12/12/2015</div>
+              </td>
+              <td>
+                  <input class = "date-input" type = "date"></input></td>
+              <td>
+                <input class = "rent-inputs"
+                       type = "number"
+                       placeholder="PSF/Year"></input></td>
+              <td>
+                <input class = "rent-inputs hidden"
+                       type = "number"
+                       placeholder="% of Period"></input></td>
+              <td>
+                <div class = "rent-radio-container">
+                  <label for = "Renewal">Renewal</label>
+                  <input value = "Renewal"
+                         id = "Renewal"
+                         name = "Renewal"
+                         type = "radio"></input>
+                  <label for = "Market">Market</label>
+                  <input checked
+                         id = "Market"
+                         value = "Market"
+                         name = "Renewal"
+                         type = "radio"></input>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+<!-- Files Start -->
+<div class = "content hidden">
+  <div class = "header">Files</div>
+  <hr>
+  <div class = "file-container">
+    <a href ="www.espn.com"><div class = "file">lease.pdf</div></a>
+    <a href =""><div class = "file">floorplan.pdf</div></a>
+    </div>
+    <form action="/upload-target" class="dropzone dropzone-container"></form>
+</div>
+<!-- rent table end -->
+      </div>
+    </div>
   </div>
 </div>
+
 <script src="/scripts/posts.js"></script>

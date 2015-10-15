@@ -90,11 +90,9 @@ a{
 .nav-button:hover{
   background-color: lightgrey;
 }
-
 .unanchored{
   padding-left: 1em;
 }
-
 .search-bar{
   float: right;
   color: lightgrey;
@@ -229,7 +227,7 @@ a{
     display: none;
 }
 .content{
-  min-height: 12em;
+  min-height: auto;
   min-width: 100%;
 
   padding: .5em;
@@ -323,3 +321,89 @@ label{
   font-weight: lighter;
   text-align: center;
 }
+/*TENANT INPUTS*/
+.rent-assump-table{
+  text-align: center;
+}
+
+.rent-assump-container{
+  height: 4em;
+}
+.date-input{
+  height: 2em;
+  display: inline;
+}
+.rent-inputs{
+  height: 2em;
+  min-width: 3em;
+  max-width: 6em;
+  display: inline;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rent-radio-container{
+  width: 6em;
+  display: inline;
+}
+
+/*DROPZONE CSS*/
+
+.file-container{
+    width: 100%;
+}
+  .file{
+    height: 1em;
+    margin-top: .2em;
+    border-top: 1px solid lightgrey;
+  }
+    .file:hover{
+      background-color: lightgrey;
+    }
+
+.dropzone-container{
+  display: block;
+  margin-top: .2em;
+  height: 3em;
+  width: 100%;
+  border: 2px dashed grey;
+  text-align: center;
+}
+.dropzone, .dropzone * {
+  box-sizing: border-box; }
+
+.dropzone {
+  position: relative; }
+  .dropzone .dz-preview {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    margin: 0.5em; }
+    .dropzone .dz-preview .dz-progress {
+      display: block;
+      height: 15px;
+      border: 1px solid #aaa; }
+      .dropzone .dz-preview .dz-progress .dz-upload {
+        display: block;
+        height: 100%;
+        width: 0;
+        background: green; }
+    .dropzone .dz-preview .dz-error-message {
+      color: red;
+      display: none; }
+    .dropzone .dz-preview.dz-error .dz-error-message, .dropzone .dz-preview.dz-error .dz-error-mark {
+      display: block; }
+    .dropzone .dz-preview.dz-success .dz-success-mark {
+      display: block; }
+    .dropzone .dz-preview .dz-error-mark, .dropzone .dz-preview .dz-success-mark {
+      position: absolute;
+      display: none;
+      left: 30px;
+      top: 30px;
+      width: 54px;
+      height: 58px;
+      left: 50%;
+      margin-left: -27px; }
