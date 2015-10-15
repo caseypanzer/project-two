@@ -1,26 +1,24 @@
-<div class = "background-image">
-</div>
-<div class = "narrow-form-container">
-<form action="/users/login" method="post">
-    <h3 class="header">Welcome to Wiki!</h3>
-    <p class="header">Please Sign In Below</p>
-      <div class = "input-container">
-        <div class = "icon">&#x2709;</div>
-        <input type = "text"
-              name = "user[email]"
-              placeholder="Email Address"
-              class = "single-line-input-form">
-      </div>
-      <div class = "input-container">
-        <div class = "icon">&#xe204;</div>
-        <input type = "password"
-              name = "user[password]"
-              placeholder="Enter Password"
-              class = "single-line-input-form">
-      </div>
-      <input type="submit" class="my-button" value="Login">
-      <a href = "/users/new"><h6>New User? Sign up here!</h6></a>
-</form>
-
-</div>
-<% include ../brand.ejs %>
+<body class = "background-image">
+    <div class = "brand-large">WIKI</div>
+    <div class = "narrow-form-container">
+    <form action="/users/login" method="post">
+        <p class="header">Please Sign In Below</p>
+          <div class = "input-container">
+            <div class = "icon">&#x2709;</div>
+            <input type = "text"
+                  name = "user[email]"
+                  placeholder="Email Address"
+                  class = "single-line-input-form">
+          </div>
+          <div class = "input-container">
+            <div class = "icon">&#xe204;</div>
+            <input type = "password"
+                  name = "user[password]"
+                  placeholder="Enter Password"
+                  class = "single-line-input-form">
+          </div>
+          <input type="submit" class="my-button" value="Login">
+          <a href = "/users/new"><h6>New User? Sign up here!</h6></a>
+    </form>
+    </div>
+</body>

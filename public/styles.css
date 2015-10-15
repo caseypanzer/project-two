@@ -3,7 +3,8 @@
   padding: 0;
   margin: 0;
 
-  font-family: RosettaTones, Geneva, sans-serif
+  font-family: Helvetica, Geneva, sans-serif;
+  font-weight: lighter;
 }
 a{
   text-decoration: none;
@@ -35,7 +36,7 @@ a{
 
   display: inline-block;
 }
-.brand{
+.brand-header{
   float: left;
 
   padding: .125em;
@@ -46,9 +47,16 @@ a{
   font-family: 'Megrim', cursive;
   display: inline-block;
 }
+.brand-large{
+  padding-top: 10%;
+  text-align: center;
+  font-size: 6em;
 
+  font-family: 'Megrim', cursive;
+}
+/*NAVBAR CSS*/
 .nav-bar{
-  position: absolute;
+  position: fixed;
   top: 3.75em;
   left: 0em;
 
@@ -63,7 +71,6 @@ a{
 
   box-shadow: 0px 1.25px 3.5px grey
 }
-
 .nav-button{
   border: 0;
   width: 100%;
@@ -80,9 +87,12 @@ a{
 
   border-bottom: 1px solid lightgrey;
 }
-
 .nav-button:hover{
   background-color: lightgrey;
+}
+
+.unanchored{
+  padding-left: 1em;
 }
 
 .search-bar{
@@ -105,7 +115,7 @@ a{
 /*USER CSS*/
 .narrow-form-container{
     position: relative;
-    top: 10em;
+    top: 30%;
 
     width: 22em;
     height: auto;
@@ -115,7 +125,7 @@ a{
 
     margin-bottom: .1em;
 
-    opacity: 0.75;
+    opacity: 0.85;
     filter: alpha(opacity=40);
 
     border-radius: 5px;
@@ -124,17 +134,15 @@ a{
   }
 
 .background-image{
-  position: fixed;
-  top: 3.75em;
-  right: 0;
+  background-image: url(http://www.siwallpaperhd.com/wp-content/uploads/2015/06/black_and_white_new_york_skyline_wallpaper_hd_11.jpg);
 
-  background: url(http://www.spirit1059.com/pics/Feeds/Articles/2015611/118317/Beach.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 
-  width: 100%;
-  padding-top: 66.64%;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
+  background-color: lightgrey;
+
 }
 
 .input-container{
@@ -166,24 +174,22 @@ a{
 /*CONTENT CSS*/
 .content-container{
   position: relative;
-  top: 4em;
+  top: 4.5em;
   height: auto;
   margin-left: 9em;
   margin-right: 1em;
 }
-
-/*POST CSS*/
 .post-container{
-
-
+  margin-bottom: 1em;
 }
 
+/*POST CSS*/
 .post{
   width: 100%;
   border: 1px grey solid;
   border-radius: .1em;
 
-  margin-bottom: .1em;
+  margin-top: .1em;
 }
 .post:nth-child(odd){
   background-color: lightgrey;
@@ -297,7 +303,6 @@ a{
   padding: .25em;
   margin-bottom: .5em;
 }
-
 textarea{
   width: 100%;
   height: 25em;
@@ -309,12 +314,10 @@ textarea{
 
   resize: none;
 }
-
 label{
   font-size: 1em;
   padding: .1em;
 }
-
 .header{
   font-size: 1.2em;
   font-weight: lighter;

@@ -1,52 +1,51 @@
-<div class = "background-image">
-</div>
-
-<div class = "narrow-form-container">
-  <h3 class="header">Welcome to Wiki!</h3>
-  <p class="header">New User? Please Sign Up Below</p>
-    <form action="/users" method="post">
-      <div class = "input-container">
-        <div class = "icon">&#x2709;</div>
-        <input type = "text"
-             name = "user[firstName]"
-             placeholder="First Name"
-             class = "single-line-input-form">
-      </div>
-      <div class = "input-container">
-        <div class = "icon">&#x2709;</div>
-        <input type = "text"
-               name = "user[lastName]"
-               placeholder="Last Name"
+<body class = "background-image">
+  <div class = "brand-large">WIKI</div>
+  <div class = "narrow-form-container">
+    <p class="header">New User? Please Sign Up Below</p>
+      <form action="/users" method="post">
+        <div class = "input-container">
+          <div class = "icon">&#x2709;</div>
+          <input type = "text"
+               name = "user[firstName]"
+               placeholder="First Name"
                class = "single-line-input-form">
-      </div>
-      <div class = "input-container">
-        <div class = "icon">&#x2709;</div>
-        <input type = "text"
-               name = "user[email]"
-               placeholder="Email Address"
-               class = "single-line-input-form">
-      </div>
-      <div class = "input-container">
-        <div class = "icon">&#x2709;</div>
-        <input type = "text"
-               name = "reEmail"
-               placeholder="Re-enter Email Address"
-               class = "single-line-input-form">
-      </div>
-      <div class = "input-container">
-        <div class = "icon">&#x2709;</div>
-        <input type = "password"
-               name = "user[password]"
-               placeholder="Enter Password"
-               class = "single-line-input-form">
-      </div>
-      <div class = "input-container">
-        <div class = "icon">&#x2709;</div>
-        <input type = "password"
-               name = "rePassword"
-               placeholder="Re-enter Password"
-               class = "single-line-input-form">
-      </div>
-        <input type="submit" class = "my-button" value="Sign Up!">
-    </form>
-</div>
+        </div>
+        <div class = "input-container">
+          <div class = "icon">&#x2709;</div>
+          <input type = "text"
+                 name = "user[lastName]"
+                 placeholder="Last Name"
+                 class = "single-line-input-form">
+        </div>
+        <div class = "input-container">
+          <div class = "icon">&#x2709;</div>
+          <input type = "text"
+                 name = "user[email]"
+                 placeholder="Email Address"
+                 class = "single-line-input-form">
+        </div>
+        <div class = "input-container">
+          <div class = "icon">&#x2709;</div>
+          <input type = "text"
+                 name = "reEmail"
+                 placeholder="Re-enter Email Address"
+                 class = "single-line-input-form">
+        </div>
+        <div class = "input-container">
+          <div class = "icon">&#x2709;</div>
+          <input type = "password"
+                 name = "user[password]"
+                 placeholder="Enter Password"
+                 class = "single-line-input-form">
+        </div>
+        <div class = "input-container">
+          <div class = "icon">&#x2709;</div>
+          <input type = "password"
+                 name = "rePassword"
+                 placeholder="Re-enter Password"
+                 class = "single-line-input-form">
+        </div>
+          <input type="submit" class = "my-button" value="Sign Up!">
+      </form>
+  </div>
+</body>

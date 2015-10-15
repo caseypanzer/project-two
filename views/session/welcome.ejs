@@ -1,24 +1,25 @@
 <% include ../header.ejs %>
 <% include ../navbar.ejs %>
+<div class = "content-container">
+    <div class = "post-container">
+    <div class = "header">Articles by You</div>
+    <hr>
+    <% posts.forEach(function(post){ %>
+      <div class = "post">
+            <div class = "tag-line tag-line-summary">
+              <div class = "tag-line-header"><%= post.title %></div>
+              <div class = "tag-line-description">some, tags, some tags</div>
+              <div class = "tag-line-update-info"><%= post.lastUpdated %> by <%= post.lastUpdatedBy %></div>
 
-<div class = "post-container">
-  <div class = "header">Articles by You</div>
-  <hr>
-  <% posts.forEach(function(post){ %>
-    <div class = "post">
-          <div class = "tag-line tag-line-summary">
-            <div class = "tag-line-header"><%= post.title %></div>
-            <div class = "tag-line-description">some, tags, some tags</div>
-            <div class = "tag-line-update-info"><%= post.lastUpdated %> by <%= post.lastUpdatedBy %></div>
-
+            </div>
+            <div class = "content hidden">
+                <div class = "img-container-one"><img src = "<%= post.coverPhoto %>"></div>
+               <div class = "text-container"> <%= post.articleText %> </div>
+              <a href="/posts/<%- post._id %>/edit"><button class = "my-button">Edit Wiki</button></a>
+              <a href="/posts/<%- post._id %>/"><button class = "my-button">View Wiki</button></a>
           </div>
-          <div class = "content hidden">
-              <div class = "img-container-one"><img src = "<%= post.coverPhoto %>"></div>
-             <div class = "text-container"> <%= post.articleText %> </div>
-            <a href="/posts/<%- post._id %>/edit"><button class = "my-button">Edit Wiki</button></a>
-            <a href="/posts/<%- post._id %>/"><button class = "my-button">View Wiki</button></a>
-        </div>
+    </div>
+    <% }) %>
   </div>
-  <% }) %>
 </div>
 <script src="/scripts/posts.js"></script>
