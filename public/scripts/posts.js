@@ -14,3 +14,5 @@ $anchored.on("mouseenter",function(e){
 $anchored.on("mouseleave",function(e){
     $(this).children(".unanchored").toggle(200);
 });
+
+$("$.inital-comments").autoGrow()
