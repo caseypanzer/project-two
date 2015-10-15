@@ -69,6 +69,28 @@
         <div class = "content hidden">
           <div class = "header">Info</div>
           <hr>
+        <form>
+          <input type = "text" placeholder="Tenant Name">
+          <input type = "number" placeholder="Suite Square Footage">
+          <input type = "text" placeholder="Suite ID">
+          <div>Key Lease Dates
+              <label>Signed: <label><input type = "date">
+              <label>Commencement: <label><input type = "date">
+              <div>Expiration: </div>
+          </div>
+          <select><option>Tenant Type</option></select>
+          <div>TI Allowance
+            <input type = "number" placeholder="TI Allowance PSF"></input>
+            <div> Total TI Allowance</div>
+          </div>
+          <div>Commission
+            <input type = "number" placeholder="Due At Signing"></input>
+            <input type = "number" placeholder="Due At Signing"></input>
+          </div>
+          <div>6 months of Free Rent worth $xxx,xxx at $5.00 PSF</div>
+          <textarea placeholder="Other Lease Structure Notes"></textarea>
+
+        </form>
         </div>
 <!-- Comments Info Start -->
         <div class = "content hidden">
@@ -118,16 +140,16 @@
             </tr>
             <tr>
               <td>
-                <div class = "date-display rent-inputs">12/12/2015</div>
+                <div class = "date-display">12/12/2015</div>
               </td>
               <td>
-                  <input class = "date-input" type = "date"></input></td>
+                  <input class = "rent-input" type = "date"></input></td>
               <td>
                 <input class = "rent-inputs"
                        type = "number"
-                       placeholder="PSF/Year"></input></td>
+                       placeholder="$PSF/Year"></input></td>
               <td>
-                <input class = "rent-inputs hidden"
+                <input class = "rent-inputs"
                        type = "number"
                        placeholder="% of Period"></input></td>
               <td>

@@ -330,6 +330,10 @@ label{
     -webkit-appearance: none;
     margin: 0;
   }
+    .rent-inputs{
+      text-align: center;
+      height: 2em;
+    }
 /*Comments*/
 .overall-comment-container{
   border-bottom: 1px solid lightgrey;
@@ -352,10 +356,15 @@ label{
     border-top: 1px solid lightgrey;
     padding-left: 1.5em;
   }
+    .sub-comments:hover{
+      background-color: lightgrey;
+    }
   .inital-comments{
     padding-left: .5em;
-
   }
+    .inital-comments:hover{
+      background-color: lightgrey;
+    }
     .comment-author{
       font-size: .75em;
     }
