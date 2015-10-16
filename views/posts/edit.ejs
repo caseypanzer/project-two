@@ -1,9 +1,10 @@
 <% include ../header.ejs %>
 <% include ../navbar.ejs %>
-<div class = "post-container">
+  <div class = "content-container">
+      <div class = "post-container">
     <div class = "header">Edit Article</div>
     <hr/>
-    <div class = "info">Last Updated By: <%= post.lastUpdatedBy %> on <%= post.lastUpdated %> at</div>
+    <div class = "info">Last Updated By: <%= post.lastUpdatedBy %> at <%= post.lastUpdated %></div>
     <form action="/posts/<%= post._id %>?_method=PATCH" method="post"></br>
         <label>Post Title:</label></br>
         <input type = "text"
@@ -12,7 +13,8 @@
                class= "input-post"
                placeholder="Enter Article Title"></br>
        <label>Article Text</label></br>
-       <textarea name = "post[articleText]" class = ".post-textarea"><%= post.articleText %></textarea></br>
+       <textarea name = "post[articleText]"
+                 class = "post-textarea"><%= post.articleText %></textarea></br>
        <label>Link to Photo:</label></br>
         <input type = "text"
                name = "post[coverPhoto]"
@@ -21,4 +23,5 @@
                placeholder="Paste Link to Cover Photo">
         <input class = "my-button" type="submit" value="Post to Wiki!">
     </form>
+</div>
 </div>

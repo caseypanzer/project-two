@@ -3,8 +3,10 @@
 <div class = "content-container">
   <div class = "post-container">
   <div class = "post">
-            <div class = "tag-line "><%= post.title %></div>
+            <div class = "tag-line "><%= post.title %>
+            </div>
             <div class = "content">
+              <div class = "info">Last Updated By: <%= post.lastUpdatedBy %> at <%= post.lastUpdated %></div>
                 <div class = "img-container-one"><img src = "<%= post.coverPhoto %>"></div>
                <div class = "text-container"> <%= post.articleText %> </div>
             <form action="/posts/<%= post.id %>?_method=DELETE" method="post">

@@ -321,6 +321,43 @@ label{
   font-weight: lighter;
   text-align: center;
 }
+/*Information Containers*/
+.info-container{
+  display: inline;
+}
+  .tenant-info{
+    max-width: 25em;
+    display: inline-block;
+  }
+    .tenant-name{
+      display: block;
+      width: 100%;
+    }
+    .inline-block{
+      display: inline-block;
+    }
+  .address-book{
+    width: 13em;
+    display: inline-block;
+    vertical-align: top;
+    /*overflow: hidden;*/
+    text-align: center;
+    margin-left: 1em;
+  }
+    .address-book-display{
+      height: 2em;
+      border-bottom: 1px solid lightgrey;
+    }
+      .address-book-display:hover{
+        background-color: lightgrey;
+      }
+      .small-block-text{
+        font-size: .75em;
+      }
+    .address-book-detail{
+
+    }
+
 /*TENANT INPUTS*/
 .rent-assump-table{
   text-align: center;
@@ -340,7 +377,6 @@ label{
   padding-top: .5em;
 
   width: 100%;
-
 }
 .comment-headers{
   text-align: center;

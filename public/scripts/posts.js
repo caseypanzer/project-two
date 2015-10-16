@@ -1,18 +1,23 @@
-var $tagLine = $(".tag-line");
+var $tagLine = $(".tag-line"),
+    $addressBookDisplay = $(".address-book-display"),
+    $rootNavButtonHolder = $(".root-nav-button-holder");
 
 $tagLine.on("click",function(e){
-  console.log(this);
-      $(this).siblings('.content').toggle(0);
+    $(this).siblings('.content').toggle(0);
 });
 
-var $anchored = $(".root-nav-button-holder");
-
-$anchored.on("mouseenter",function(e){
+$rootNavButtonHolder.on("mouseenter",function(e){
     $(this).children(".unanchored").toggle(100);
 });
 
-$anchored.on("mouseleave",function(e){
+$rootNavButtonHolder.on("mouseleave",function(e){
     $(this).children(".unanchored").toggle(200);
 });
 
-$("$.inital-comments").autoGrow()
+$addressBookDisplay.on("click",function(e){
+  console.log(this);
+    $(this).siblings('.address-book-detail').toggle(200);
+});
+
+
+// $("$.inital-comments").autoGrow()
